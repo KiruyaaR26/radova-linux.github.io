@@ -1192,9 +1192,14 @@ main #manifesto .swiss-ledger article.ledger-item,
   line-height: 1.15;
   letter-spacing: -0.02em;
   color: var(--red-900);
-  width: 70%;
   display: block;
   text-transform: capitalize;
+}
+
+@media (min-width: 768px) {
+  .fitur-head h2 {
+    max-width: 70%;
+  }
 }
 
 .fitur-head-meta {
@@ -1221,7 +1226,7 @@ main #fitur .fitur-matrix article.fitur-card {
 @media (min-width: 1024px) {
   .fitur-matrix {
     display: grid;
-    grid-template-columns: repeat(2, calc(50% - 1.25rem));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
     align-items: stretch;
   }
