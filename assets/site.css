@@ -513,7 +513,7 @@ nav.navbar li :where(a, [role="link"]) {
   display: block;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767px) {
   .site-header {
     position: static;
     flex-wrap: wrap;
@@ -523,7 +523,7 @@ nav.navbar li :where(a, [role="link"]) {
     order: 3;
     width: 100%;
   }
-  .site-header nav.navbar {
+  .site-header .header-cta {
     order: 0;
     width: auto;
     margin-left: auto;
