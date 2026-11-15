@@ -67,7 +67,8 @@
   --pico-border-radius: 12px;
   --pico-form-element-focus-color: #DB000F;
 
-  --pad-x: max(1rem, calc((100% - 72rem) / 2));
+  /* Pico CSS .container alignment: 100% (<576px), 510px (sm), 700px (md), 950px (lg), 1200px (xl) */
+  --pad-x: 1rem;
   --pad-y: clamp(5rem, 9vw, 7.5rem);
 
   --ic-arrow-up-right: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M200%2C64V168a8%2C8%2C0%2C0%2C1-16%2C0V83.31L69.66%2C197.66a8%2C8%2C0%2C0%2C1-11.32-11.32L172.69%2C72H88a8%2C8%2C0%2C0%2C1%2C0-16H192A8%2C8%2C0%2C0%2C1%2C200%2C64Z%22%2F%3E%3C%2Fsvg%3E");
@@ -87,6 +88,30 @@
   --ic-download-red: url("data:image/svg+xml,%3Csvg%20fill%3D%22%23DB000F%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M224%2C144v64a8%2C8%2C0%2C0%2C1-8%2C8H40a8%2C8%2C0%2C0%2C1-8-8V144a8%2C8%2C0%2C0%2C1%2C16%2C0v56H208V144a8%2C8%2C0%2C0%2C1%2C16%2C0Zm-101.66%2C5.66a8%2C8%2C0%2C0%2C0%2C11.32%2C0l40-40a8%2C8%2C0%2C0%2C0-11.32-11.32L136%2C124.69V32a8%2C8%2C0%2C0%2C0-16%2C0v92.69L93.66%2C98.34a8%2C8%2C0%2C0%2C0-11.32%2C11.32Z%22%2F%3E%3C%2Fsvg%3E");
   --ic-arrow-white: url("data:image/svg+xml,%3Csvg%20fill%3D%22%23FFFFFF%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M200%2C64V168a8%2C8%2C0%2C0%2C1-16%2C0V83.31L69.66%2C197.66a8%2C8%2C0%2C0%2C1-11.32-11.32L172.69%2C72H88a8%2C8%2C0%2C0%2C1%2C0-16H192A8%2C8%2C0%2C0%2C1%2C200%2C64Z%22%2F%3E%3C%2Fsvg%3E");
   --ic-stack-white: url("data:image/svg+xml,%3Csvg%20fill%3D%22%23FFFFFF%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M230.91%2C172A8%2C8%2C0%2C0%2C1%2C228%2C182.91l-96%2C56a8%2C8%2C0%2C0%2C1-8.06%2C0l-96-56A8%2C8%2C0%2C0%2C1%2C36%2C169.09l92%2C53.65%2C92-53.65A8%2C8%2C0%2C0%2C1%2C230.91%2C172ZM220%2C121.09l-92%2C53.65L36%2C121.09A8%2C8%2C0%2C0%2C0%2C28%2C134.91l96%2C56a8%2C8%2C0%2C0%2C0%2C8.06%2C0l96-56A8%2C8%2C0%2C1%2C0%2C220%2C121.09ZM24%2C80a8%2C8%2C0%2C0%2C1%2C4-6.91l96-56a8%2C8%2C0%2C0%2C1%2C8.06%2C0l96%2C56a8%2C8%2C0%2C0%2C1%2C0%2C13.82l-96%2C56a8%2C8%2C0%2C0%2C1-8.06%2C0l-96-56A8%2C8%2C0%2C0%2C1%2C24%2C80Zm23.88%2C0L128%2C126.74%2C208.12%2C80%2C128%2C33.26Z%22%2F%3E%3C%2Fsvg%3E");
+}
+
+@media (min-width: 576px) {
+  :root {
+    --pad-x: max(1rem, calc((100% - 510px) / 2));
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --pad-x: max(1rem, calc((100% - 700px) / 2));
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --pad-x: max(1rem, calc((100% - 950px) / 2));
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --pad-x: max(1rem, calc((100% - 1200px) / 2));
+  }
 }
 
 *, *::before, *::after {
@@ -488,7 +513,7 @@ nav.navbar li :where(a, [role="link"]) {
   display: block;
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 575.98px) {
   .site-header {
     position: static;
     flex-wrap: wrap;
@@ -775,7 +800,7 @@ a.btn, button.btn, .copy-btn {
   gap: 2rem;
 }
 
-@media (min-width: 56rem) {
+@media (min-width: 1024px) {
   .hero-split {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -857,7 +882,7 @@ a.btn, button.btn, .copy-btn {
   gap: 1.5rem;
 }
 
-@media (min-width: 52rem) {
+@media (min-width: 1024px) {
   .workbench-grid {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
@@ -950,7 +975,7 @@ main #hero .hero-workbench article.deck-item,
   gap: 3rem;
 }
 
-@media (min-width: 56rem) {
+@media (min-width: 1024px) {
   .manifesto-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -1017,7 +1042,6 @@ main #hero .hero-workbench article.deck-item,
 
 .manifesto-lead {
   font-family: "Lato", var(--font-heading);
-  /* font-size: clamp(1.375rem, 2.2vw, 1.75rem); */
   font-size: clamp(2rem, 2.2vw, 4rem);
   font-weight: 700;
   line-height: 1.38;
@@ -1043,7 +1067,7 @@ main #hero .hero-workbench article.deck-item,
   border-bottom: 1px solid var(--line);
 }
 
-@media (min-width: 42rem) {
+@media (min-width: 768px) {
   .swiss-ledger {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1060,14 +1084,14 @@ main #manifesto .swiss-ledger article.ledger-item,
   position: relative;
 }
 
-@media (max-width: 41.99rem) {
+@media (max-width: 767.98px) {
   main #manifesto .swiss-ledger article.ledger-item:not(:first-child),
   .ledger-item:not(:first-child) {
     border-top: 1px solid var(--line);
   }
 }
 
-@media (min-width: 42rem) {
+@media (min-width: 768px) {
   main #manifesto .swiss-ledger article.ledger-item:nth-child(2n),
   .ledger-item:nth-child(2n) {
     border-left: 1px solid var(--line);
@@ -1151,7 +1175,6 @@ main #manifesto .swiss-ledger article.ledger-item,
 }
 
 .fitur-head {
-  /* display: flex; */
   justify-content: space-between;
   align-items: flex-end;
   flex-wrap: wrap;
@@ -1195,11 +1218,10 @@ main #fitur .fitur-matrix article.fitur-card {
   margin: 0;
 }
 
-@media (min-width: 56rem) {
+@media (min-width: 1024px) {
   .fitur-matrix {
     display: grid;
     grid-template-columns: repeat(2, calc(50% - 1.25rem));
-    /* grid-template-columns: repeat(12, 1fr); */
     gap: 1.25rem;
     align-items: stretch;
   }
@@ -1209,28 +1231,6 @@ main #fitur .fitur-matrix article.fitur-card {
     grid-column: 1 / 6;
     grid-row: 1 / 3;
   }
-
-  /* KARTU B, C, D, E: Asymmetric Interlocking Brick */
-  /* .card-b {
-    grid-column: 6 / 10;
-    grid-row: 1 / 2;
-  } */
-/* 
-
-  .card-c {
-    grid-column: 10 / 13;
-    grid-row: 1 / 2;
-  } */
-
-  /* .card-d {
-    grid-column: 6 / 9;
-    grid-row: 2 / 3;
-  }
-
-  .card-e {
-    grid-column: 9 / 13;
-    grid-row: 2 / 3;
-  } */
 }
 
 /* Kartu A: The Command Monolith */
@@ -1475,7 +1475,6 @@ main #fitur .fitur-matrix article.fitur-card {
 .card-dock code {
   display: block;
   font-size: 13px;
-  /* overflow-x: auto; */
   white-space: nowrap;
   color: inherit;
 }
@@ -1515,7 +1514,7 @@ main #fitur .fitur-matrix article.fitur-card {
   padding-block: clamp(5rem, 9vw, 7.5rem);
 }
 
-@media (min-width: 56rem) {
+@media (min-width: 1024px) {
   #arsitektur {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -1651,13 +1650,13 @@ main #fitur .fitur-matrix article.fitur-card {
   gap: 1.25rem;
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 576px) {
   .specs-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 60rem) {
+@media (min-width: 1024px) {
   .specs-grid {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -1918,7 +1917,7 @@ main #fitur .fitur-matrix article.fitur-card {
   letter-spacing: 0.04em;
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 767.98px) {
   .unduh-card::after {
     display: none;
   }
@@ -2114,7 +2113,7 @@ main #fitur .fitur-matrix article.fitur-card {
   text-align: center;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 768px) {
   .site-footer {
     flex-direction: row;
     justify-content: space-between;
