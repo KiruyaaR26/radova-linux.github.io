@@ -12,13 +12,13 @@
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-latin-wght.woff2" crossorigin>
   <link rel="icon" type="image/svg+xml" href="/assets/logo.png">
   <link rel="stylesheet" href="/assets/pico.min.css">
-  <link rel="stylesheet" href="/assets/site.css?v=9">
+  <link rel="stylesheet" href="/assets/site.css?v=14">
   <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
   <meta name="htmx-config" content='{"allowEval":false,"allowScriptTags":false,"selfRequestsOnly":true,"includeIndicatorStyles":false}'>
 </head>
 <body>
 
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
 <header class="site-header">
   <span class="brand-lockup">
@@ -29,28 +29,31 @@
   <div id="primary-nav" class="header-menu">
     <nav aria-label="Primary navigation">
       <ul class="nav-list">
-        <li><a target="_blank" href="https://packer.radova.org">Packages</a></li>
-        <li><a target="_blank" href="https://wiki.radova.org">Wiki</a></li>
-        <li><a href="https://radova.org/learns">Learning</a></li>
-        <li><a href="https://radova.org/events">Events</a></li>
-        <li><a href="https://radova.org/latest/">Latest</a></li>
+        <li><a target="_blank" href="https://packer.radova.org" data-i18n="nav.packages">Packages</a></li>
+        <li><a target="_blank" href="https://wiki.radova.org" data-i18n="nav.wiki">Wiki</a></li>
+        <li><a href="https://radova.org/learns" data-i18n="nav.learning">Learning</a></li>
+        <li><a href="https://radova.org/events" data-i18n="nav.events">Events</a></li>
+        <li><a href="https://radova.org/latest/" data-i18n="nav.latest">Latest</a></li>
       </ul>
     </nav>
 
     <nav class="navbar" aria-label="About menu">
       <ul class="nav-links">
         <li class="dropdown">
-          <a id="test2" href="#" class="btn-navy" aria-haspopup="true" aria-expanded="false">About</a>
+          <a id="test2" href="#" class="btn-navy" aria-haspopup="true" aria-expanded="false" data-i18n="nav.about">About</a>
           <div class="menu-arrow" aria-hidden="true"></div>
           <div class="dropdown-content" role="menu">
-            <a class="d-content-h" href="https://radova.org/about/" role="menuitem">About</a>
-            <a class="d-content-r" href="https://radova.org/about/history" role="menuitem">History</a>
-            <a class="d-content-c" href="https://radova.org/about/contact" role="menuitem">Contact</a>
+            <a class="d-content-h" href="https://radova.org/about/" role="menuitem" data-i18n="nav.about">About</a>
+            <a class="d-content-r" href="https://radova.org/about/history" role="menuitem" data-i18n="nav.history">History</a>
+            <a class="d-content-c" href="https://radova.org/about/contact" role="menuitem" data-i18n="nav.contact">Contact</a>
+            <button type="button" class="d-content-back" role="menuitem" data-i18n="nav.back">Back</button>
           </div>
         </li>
       </ul>
     </nav>
   </div>
+
+  <button type="button" id="lang-toggle" class="btn-lang" aria-label="Switch language to Indonesian">EN</button>
 
   <button
     type="button"
@@ -68,7 +71,7 @@
 
     <section id="hero" class="hero" aria-labelledby="hero-title">
       <div class="hero-spec-strip" data-sys="SYS // INIT 1 ">
-        <p class="hero-chip">Ready to Rock</p>
+        <p class="hero-chip" data-i18n="hero.chip">Ready to Rock</p>
       </div>
 
       
@@ -81,11 +84,11 @@
         </div>
 
         <div class="hero-split-right">
-          <h1 id="hero-title">Where is the shell, <br><span>there is the way</span></h1>
-          <p class="lead hero-lead">Radova Linux gives you the true speed without the weekend-long setup. Stripped of bloat and tuned with sensible defaults — just boot, sign in, and start building.</p>
+          <h1 id="hero-title" data-i18n-prefix="hero.title1">Where is the shell, <br><span data-i18n="hero.title2">there is the way</span></h1>
+          <p class="lead hero-lead" data-i18n="hero.lead">Radova Linux gives you the true speed without the weekend-long setup. Stripped of bloat and tuned with sensible defaults — just boot, sign in, and start building.</p>
 
           <p class="hero-actions">
-            <a href="https://sourceforge.net/projects/memora/files/radova-linux-2026.11.06-x86_64.iso/download" class="btn btn-lg btn-primary btn-arrow">Download</a>
+            <a href="https://sourceforge.net/projects/memora/files/radova-linux-2026.11.06-x86_64.iso/download" class="btn btn-lg btn-primary btn-arrow" data-i18n="hero.download">Download</a>
           </p>
         </div>
       </div>
@@ -118,34 +121,34 @@
     <section id="manifesto" data-label="statement" aria-labelledby="manifesto-title">
       <div class="manifesto-grid">
         <div class="manifesto-col-left">
-          <h2 id="manifesto-title" class="manifesto-title">Keep it, <br><span>simple stupid</span></h2>
+          <h2 id="manifesto-title" class="manifesto-title" data-i18n-prefix="manifesto.title1">Keep it, <br><span data-i18n="manifesto.title2">simple stupid</span></h2>
         </div>
 
         <div class="manifesto-col-right">
-          <p class="manifesto-lead">Manage your assets flawlessly</p>
-          <p class="manifesto-deep">Radova Linux delivers an autonomous operating system built for institutional memory, archives, and digital asset sovereignty.</p>
+          <p class="manifesto-lead" data-i18n="manifesto.lead">Manage your assets flawlessly</p>
+          <p class="manifesto-deep" data-i18n="manifesto.deep">Radova Linux delivers an autonomous operating system built for institutional memory, archives, and digital asset sovereignty.</p>
 
           <div class="swiss-ledger">
             <article class="ledger-item" data-index="01 /">
-              <h3>Performance</h3>
-              <p>Strips unnecessary background processes so your hardware processes large catalogs and media files quickly.</p>
+              <h3 data-i18n="manifesto.p1.title">Performance</h3>
+              <p data-i18n="manifesto.p1.desc">Strips unnecessary background processes so your hardware processes large catalogs and media files quickly.</p>
             </article>
             <article class="ledger-item" data-index="02 /">
-              <h3>Hardening</h3>
-              <p>Protects institutional databases and local archives through strict Linux kernel security and access controls.</p>
+              <h3 data-i18n="manifesto.p2.title">Hardening</h3>
+              <p data-i18n="manifesto.p2.desc">Protects institutional databases and local archives through strict Linux kernel security and access controls.</p>
             </article>
             <article class="ledger-item" data-index="03 /">
-              <h3>Centralized Asset Control</h3>
-              <p>Upload, tag, and retrieve institutional assets using the centralized application.</p>
+              <h3 data-i18n="manifesto.p3.title">Centralized Asset Control</h3>
+              <p data-i18n="manifesto.p3.desc">Upload, tag, and retrieve institutional assets using the centralized application.</p>
             </article>
             <article class="ledger-item" data-index="04 /">
-              <h3>Data Sovereignty</h3>
-              <p>Hold complete institutional ownership over your catalogs, archives, and digital files on Linux.</p>
+              <h3 data-i18n="manifesto.p4.title">Data Sovereignty</h3>
+              <p data-i18n="manifesto.p4.desc">Hold complete institutional ownership over your catalogs, archives, and digital files on Linux.</p>
             </article>
           </div>
 
           <blockquote class="manifesto-quote">
-            <p>"Today must be better than tomorrow"</p>
+            <p data-i18n="manifesto.quote">"Today must be better than tomorrow"</p>
             <cite> - null</cite>
           </blockquote>
         </div>
@@ -154,8 +157,8 @@
 
     <section id="fitur" data-label="DONT REPEAT YOURSELF" aria-labelledby="fitur-title">
       <div class="fitur-head">
-        <h2 id="fitur-title">Four core Pillars built <span>into one Linux system.</span></h2>
-        <p class="fitur-head-meta">4 PILLARS // SYSTEM ARCHITECTURE</p>
+        <h2 id="fitur-title" data-i18n-prefix="fitur.title1">Four core Pillars built <span data-i18n="fitur.title2">into one Linux system.</span></h2>
+        <p class="fitur-head-meta" data-i18n="fitur.meta">4 PILLARS // SYSTEM ARCHITECTURE</p>
       </div>
 
       <div class="fitur-matrix">
@@ -180,11 +183,11 @@
             <span class="card-index-pill" aria-hidden="true">01</span>
             <span class="card-icon-wrap"><span class="icon-phosphor icon-lightning" aria-hidden="true"></span></span>
             <h3> Memora </h3>
-            <p>Launch the pre-integrated Memora application directly from your desktop to run library operations.</p>
+            <p data-i18n="fitur.memora.desc">Launch the pre-integrated Memora application directly from your desktop to run library operations.</p>
           </div>
           <div class="card-dock">
             <dl class="mini-ui">
-              <div class="mini-row"><dt>LIBRARY MANAGEMENT</dt><dd>Status On Development</dd></div>
+              <div class="mini-row"><dt data-i18n="fitur.memora.dt">LIBRARY MANAGEMENT</dt><dd data-i18n="fitur.dev">Status On Development</dd></div>
             </dl>
           </div>
         </article>
@@ -195,11 +198,11 @@
             <span class="card-index-pill" aria-hidden="true">02</span>
             <span class="card-icon-wrap"><span class="icon-phosphor icon-feather" aria-hidden="true"></span></span>
             <h3> Evrocks </h3>
-            <p>Access the pre-installed Evrocks application immediately without setting up external archival software manually.</p>
+            <p data-i18n="fitur.evrocks.desc">Access the pre-installed Evrocks application immediately without setting up external archival software manually.</p>
           </div>
           <div class="card-dock">
             <dl class="mini-ui">
-              <div class="mini-row"><dt>ARCHIVE MANAGEMENT</dt><dd>Status On Development</dd></div>
+              <div class="mini-row"><dt data-i18n="fitur.evrocks.dt">ARCHIVE MANAGEMENT</dt><dd data-i18n="fitur.dev">Status On Development</dd></div>
             </dl>
           </div>
         </article>
@@ -210,11 +213,11 @@
             <span class="card-index-pill" aria-hidden="true">03</span>
             <span class="card-icon-wrap"><span class="icon-phosphor icon-git-branch" aria-hidden="true"></span></span>
             <h3> Coretez </h3>
-            <p>Open the built-in Coretez platform to handle digital asset management right after booting.</p>
+            <p data-i18n="fitur.coretez.desc">Open the built-in Coretez platform to handle digital asset management right after booting.</p>
           </div>
           <div class="card-dock">
             <dl class="mini-ui">
-              <div class="mini-row"><dt>DAM MANAGEMENT </dt><dd>Status On Development</dd></div>
+              <div class="mini-row"><dt data-i18n="fitur.coretez.dt">DAM MANAGEMENT</dt><dd data-i18n="fitur.dev">Status On Development</dd></div>
             </dl>
           </div>
         </article>
@@ -225,11 +228,11 @@
             <span class="card-index-pill" aria-hidden="true">04</span>
             <span class="card-icon-wrap"><span class="icon-phosphor icon-arrows-clockwise" aria-hidden="true"></span></span>
             <h3> Linkers </h3>
-            <p>Manage institutional repositories and academic works immediately through the pre-configured Linkers platform.</p>
+            <p data-i18n="fitur.linkers.desc">Manage institutional repositories and academic works immediately through the pre-configured Linkers platform.</p>
           </div>
           <div class="card-dock">
             <dl class="mini-ui">
-              <div class="mini-row"><dt>REPOSITORY MANAGEMENT</dt><dd>Status On Development</dd></div>
+              <div class="mini-row"><dt data-i18n="fitur.linkers.dt">REPOSITORY MANAGEMENT</dt><dd data-i18n="fitur.dev">Status On Development</dd></div>
             </dl>
           </div>
         </article>
@@ -237,47 +240,47 @@
     </section>
 
     <section id="spesifikasi" data-label="Requirements" aria-labelledby="spesifikasi-title">
-      <h2 id="spesifikasi-title" class="section-center">No flagship hardware.</h2>
-      <p class="lead section-lead">Radova Linux runs effortlessly on existing library computers and modern archival workstations alike.</p>
+      <h2 id="spesifikasi-title" class="section-center" data-i18n="specs.title">No flagship hardware.</h2>
+      <p class="lead section-lead" data-i18n="specs.lead">Radova Linux runs effortlessly on existing library computers and modern archival workstations alike.</p>
 
       <div class="specs-grid">
         <article class="spec-card" data-icon="cpu">
-          <h3>Processor (CPU)</h3>
-          <p class="spec-val"><strong>x86_64 Dual-Core 1.5 GHz</strong></p>
-          <p>Supports standard 64-bit Intel and AMD processors to run Memora, Evrocks, and Coretez smoothly.</p>
+          <h3 data-i18n="specs.cpu.title">Processor (CPU)</h3>
+          <p class="spec-val"><strong data-i18n="specs.cpu.val">x86_64 Dual-Core 1.5 GHz</strong></p>
+          <p data-i18n="specs.cpu.desc">Supports standard 64-bit Intel and AMD processors to run Memora, Evrocks, and Coretez smoothly.</p>
           <dl class="mini-ui">
-            <div class="mini-row"><dt>Minimum</dt><dd>2 Cores</dd></div>
-            <div class="mini-row"><dt>Recommended</dt><dd>4 Cores+</dd></div>
+            <div class="mini-row"><dt data-i18n="specs.min">Minimum</dt><dd data-i18n="specs.cpu.min">2 Cores</dd></div>
+            <div class="mini-row"><dt data-i18n="specs.rec">Recommended</dt><dd data-i18n="specs.cpu.rec">4 Cores+</dd></div>
           </dl>
         </article>
 
         <article class="spec-card" data-icon="memory">
-          <h3>Memory (RAM)</h3>
-          <p class="spec-val"><strong>2 GB RAM</strong></p>
-          <p>Leaves plenty of memory headroom to index library catalogs and browse digital archives simultaneously.</p>
+          <h3 data-i18n="specs.ram.title">Memory (RAM)</h3>
+          <p class="spec-val"><strong data-i18n="specs.ram.val">2 GB RAM</strong></p>
+          <p data-i18n="specs.ram.desc">Leaves plenty of memory headroom to index library catalogs and browse digital archives simultaneously.</p>
           <dl class="mini-ui">
-            <div class="mini-row"><dt>Minimum</dt><dd>2 GB</dd></div>
-            <div class="mini-row"><dt>Recommended</dt><dd>4 GB+</dd></div>
+            <div class="mini-row"><dt data-i18n="specs.min">Minimum</dt><dd>2 GB</dd></div>
+            <div class="mini-row"><dt data-i18n="specs.rec">Recommended</dt><dd>4 GB+</dd></div>
           </dl>
         </article>
 
         <article class="spec-card" data-icon="hard-drives">
-          <h3>Storage</h3>
-          <p class="spec-val"><strong>20 GB Storage Space</strong></p>
-          <p>Compact base installation with full-disk encryption to protect institutional records and local digital assets.</p>
+          <h3 data-i18n="specs.disk.title">Storage</h3>
+          <p class="spec-val"><strong data-i18n="specs.disk.val">20 GB Storage Space</strong></p>
+          <p data-i18n="specs.disk.desc">Compact base installation with full-disk encryption to protect institutional records and local digital assets.</p>
           <dl class="mini-ui">
-            <div class="mini-row"><dt>Minimum</dt><dd>20 GB</dd></div>
-            <div class="mini-row"><dt>Recommended</dt><dd>50+ GB NVMe</dd></div>
+            <div class="mini-row"><dt data-i18n="specs.min">Minimum</dt><dd>20 GB</dd></div>
+            <div class="mini-row"><dt data-i18n="specs.rec">Recommended</dt><dd>50+ GB NVMe</dd></div>
           </dl>
         </article>
 
         <article class="spec-card" data-icon="monitor">
-          <h3>Display & Graphics</h3>
-          <p class="spec-val"><strong>1024×768 Resolution</strong></p>
-          <p>Works on integrated Intel or AMD graphics and virtualized displays for clear document viewing.</p>
+          <h3 data-i18n="specs.disp.title">Display & Graphics</h3>
+          <p class="spec-val"><strong data-i18n="specs.disp.val">1024×768 Resolution</strong></p>
+          <p data-i18n="specs.disp.desc">Works on integrated Intel or AMD graphics and virtualized displays for clear document viewing.</p>
           <dl class="mini-ui">
-            <div class="mini-row"><dt>Minimum</dt><dd>iGPU / VM</dd></div>
-            <div class="mini-row"><dt>Recommended</dt><dd>1080p+</dd></div>
+            <div class="mini-row"><dt data-i18n="specs.min">Minimum</dt><dd>iGPU / VM</dd></div>
+            <div class="mini-row"><dt data-i18n="specs.rec">Recommended</dt><dd>1080p+</dd></div>
           </dl>
         </article>
       </div>
@@ -318,16 +321,16 @@
     </span>
 
     <ul class="footer-links">
-      <li><a href="https://radova.org/about" hx-boost="false">Abouts</a></li>
+      <li><a href="https://radova.org/about" hx-boost="false" data-i18n="nav.about">Abouts</a></li>
       <!-- <li><a href="{{DOCS_URL}}" hx-boost="false">Documentation</a></li>
       <li><a href="{{CONTACT_URL}}" hx-boost="false">Contact</a></li> -->
     </ul>
 
-    <p class="footer-copy">© 2026 yuros.org · Released under the MIT License </p>
+    <p class="footer-copy" data-i18n="footer.copy">© 2026 yuros.org · Released under the MIT License</p>
   </footer>
 
   <script src="/assets/htmx.min.js" defer></script>
-  <script src="/assets/site.js?v=2" defer></script>
-  <script src="/assets/navbar.js" defer></script>
+  <script src="/assets/site.js?v=4" defer></script>
+  <script src="/assets/navbar.js?v=2" defer></script>
 </body>
 </html>
