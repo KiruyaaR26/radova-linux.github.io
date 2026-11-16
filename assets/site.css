@@ -2208,6 +2208,7 @@ main #fitur .fitur-matrix article.fitur-card {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+
 @media (max-width: 767px) {
   .site-header {
     position: sticky;
@@ -2323,5 +2324,23 @@ main #fitur .fitur-matrix article.fitur-card {
     background-color: rgba(219, 0, 15, 0.08);
     color: var(--red-600);
     border-radius: 10px;
+  }
+}
+
+/* Wrapper Menu Desktop (Rata Tengah untuk Link Utama, About di Kanan) */
+.header-menu {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 2.9rem;
+}
+
+@media (min-width: 768px) {
+  .header-menu > nav:first-child {
+    margin-inline: auto;
+  }
+
+  .header-menu .navbar {
+    margin-left: 0;
   }
 }
