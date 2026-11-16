@@ -20,12 +20,13 @@
 
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <span class="brand-lockup">
-      <img src="/assets/logo.png" alt="Radova Logo" width="32">
-      <span class="brand-name">RADOVA</span>
-    </span>
+<header class="site-header">
+  <span class="brand-lockup">
+    <img src="/assets/logo.png" alt="Radova Logo" width="32">
+    <span class="brand-name">RADOVA</span>
+  </span>
 
+  <div id="primary-nav" class="header-menu">
     <nav aria-label="Primary navigation">
       <ul class="nav-list">
         <li><a target="_blank" href="https://packer.radova.org">Packages</a></li>
@@ -33,38 +34,36 @@
         <li><a href="https://radova.org/learns">Learning</a></li>
         <li><a href="https://radova.org/events">Events</a></li>
         <li><a href="https://radova.org/latest/">Latest</a></li>
-        <!--
-        <li><a href="#spesifikasi">Specs</a></li>
-        <li><a href="{{REPO_URL}}" hx-boost="false"></a></li>
-        -->
       </ul>
     </nav>
 
-    <div class="header-cta">
-      <nav class="navbar" aria-label="About menu">
-        <ul class="nav-links">
-          <li class="dropdown">
-            <a id="test2" href="#" class="btn-navy" aria-haspopup="true" aria-expanded="false">About</a>
-            <div class="menu-arrow" aria-hidden="true"></div>
-            <div class="dropdown-content" role="menu">
-              <a class="d-content-h" href="https://radova.org/about/" role="menuitem">
-                About<i class="ph ph-linux-logo" aria-hidden="true"></i>
-              </a>
-              <a class="d-content-r" href="https://radova.org/about/history" role="menuitem">
-                History
-                <i class="ph ph-clock-counter-clockwise" aria-hidden="true"></i>
-              </a>
-              <a class="d-content-c" href="https://radova.org/about/contact" role="menuitem">
-                Contact
-                <i class="ph ph-envelope-simple" aria-hidden="true"></i>
-              </a>
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <nav class="navbar" aria-label="About menu">
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a id="test2" href="#" class="btn-navy" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="menu-arrow" aria-hidden="true"></div>
+          <div class="dropdown-content" role="menu">
+            <a class="d-content-h" href="https://radova.org/about/" role="menuitem">About</a>
+            <a class="d-content-r" href="https://radova.org/about/history" role="menuitem">History</a>
+            <a class="d-content-c" href="https://radova.org/about/contact" role="menuitem">Contact</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
+  <button
+    type="button"
+    class="nav-toggle"
+    aria-label="Buka menu navigasi"
+    aria-controls="primary-nav"
+    aria-expanded="false"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
   <main id="main" tabindex="-1">
 
     <section id="hero" class="hero" aria-labelledby="hero-title">
