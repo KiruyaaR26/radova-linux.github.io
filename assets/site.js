@@ -74,3 +74,38 @@
     }
   }
 })();
+
+// hamburger menu
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.querySelector(".nav-toggle");
+  const primaryNav = document.getElementById("primary-nav");
+
+  if (!toggleBtn || !primaryNav) return;
+
+  const setMenuState = (open) => {
+    toggleBtn.setAttribute("aria-expanded", String(open));
+    toggleBtn.setAttribute("aria-label", open ? "Tutup menu navigasi" : "Buka menu navigasi");
+    primaryNav.classList.toggle("is-open", open);
+    document.body.style.overflow = open ? "hidden" : "";
+  };
+
+  toggleBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = toggleBtn.getAttribute("aria-expanded") === "true";
+    setMenuState(!isOpen);
+  });
+
+  primaryNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMenuState(false));
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!primaryNav.contains(e.target) && !toggleBtn.contains(e.target)) {
+      setMenuState(false);
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 768) setMenuState(false);
+  });
+});
