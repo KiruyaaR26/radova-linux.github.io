@@ -12,7 +12,7 @@
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-latin-wght.woff2" crossorigin>
   <link rel="icon" type="image/svg+xml" href="/assets/logo.png">
   <link rel="stylesheet" href="/assets/pico.min.css">
-  <link rel="stylesheet" href="/assets/site.css?v=15">
+  <link rel="stylesheet" href="/assets/site.css?v=16">
   <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
   <meta name="htmx-config" content='{"allowEval":false,"allowScriptTags":false,"selfRequestsOnly":true,"includeIndicatorStyles":false}'>
 </head>
@@ -40,7 +40,7 @@
     <nav class="navbar" aria-label="About menu">
       <ul class="nav-links">
         <li class="dropdown">
-          <a id="test2" href="#" class="btn-navy" aria-haspopup="true" aria-expanded="false" data-i18n="nav.about">About</a>
+          <a id="about-menu-btn" href="#" class="btn-navy" aria-haspopup="true" aria-expanded="false" data-i18n="nav.about">About</a>
           <div class="menu-arrow" aria-hidden="true"></div>
           <div class="dropdown-content" role="menu">
             <a class="d-content-h" href="https://radova.org/about/" role="menuitem" data-i18n="nav.about">About</a>
@@ -92,30 +92,6 @@
           </p>
         </div>
       </div>
-
-      <!-- Baris 3: Overlapping Workbench Stage -->
-      <!-- <figure class="hero-workbench" data-waybar="radova@live   ~   waybar   ·   cpu 1.2%   ·   mem {{IDLE_RAM}} / {{TOTAL_RAM}}   ·   bat 100%   ·   13:37">
-        <div class="workbench-grid">
-          <div class="workbench-term">
-
-          </div>
-
-          <div class="workbench-deck">
-            <article class="deck-item">
-              <h4>Idle Memory Footprint</h4>
-              <p class="deck-val">{{IDLE_RAM}} <span>of {{TOTAL_RAM}}</span></p>
-            </article>
-            <article class="deck-item">
-              <h4>Black Birditecture &amp; Init</h4>
-              <p class="deck-val">{{Black Bird}} <span>· {{INIT_SYSTEM}} · {{FILESYSTEM}}</span></p>
-            </article>
-            <article class="deck-item">
-              <h4>Packages &amp; Privacy</h4>
-              <p class="deck-val">{{PACKAGE_MANAGER}} <span>· Zero Telemetry</span></p>
-            </article>
-          </div>
-        </div>
-      </figure> -->
     </section>
 
     <section id="manifesto" data-label="statement" aria-labelledby="manifesto-title">
@@ -162,21 +138,6 @@
       </div>
 
       <div class="fitur-matrix">
-        <!-- KARTU A: THE COMMAND MONOLITH (Span 5 Kolom Kiri, 2 Baris Penuh) -->
-        <!-- <article class="fitur-card card-monolith">
-          <div class="monolith-top-bar">
-            <span class="monolith-icon" aria-hidden="true"></span>
-            <span class="monolith-index" aria-hidden="true">01</span>
-          </div>
-          <div class="monolith-body">
-            <h3>Autonomous Linux Environment</h3>
-            <p>Run your entire library, archive, and asset workstations on one dedicated Linux operating system.</p>
-          </div>
-          <div class="monolith-dock">
-            <code>pacman -Syu</code>
-          </div>
-        </article> -->
-
         <!-- KARTU B: 4 Kolom Baris 1 Kanan -->
         <article class="fitur-card spec-card-interlock card-b" data-index="02">
           <div class="card-zone-body">
@@ -286,37 +247,11 @@
       </div>
     </section>
 
-    <!-- <section id="unduh" data-label="Download" aria-labelledby="unduh-title">
-      <div class="unduh-grid">
-        <article class="unduh-card">
-          <p class="eyebrow">Official Live &amp; Install Media</p>
-          <h3>ISO Image</h3>
-          <p class="unduh-desc">Ready for daily use on laptops, desktop workstations, or virtual machines.</p>
-
-          <p class="unduh-action">
-            <a href="" class="btn btn-primary btn-iso-full" hx-boost="false"><span>Download</span></a>
-          </p>
-        </article>
-
-      </div>
-    </section> -->
-
-    <!-- <section id="mulai-sekarang" aria-labelledby="cta-title">
-      <h2 id="cta-title">Take Radova Linux for a spin</h2>
-      <p class="lead cta-lead">A clean, fast operating system crafted to stay out of your way and elevate your daily workflow.</p>
-      <p class="cta-btn-wrap">
-        <a href="{{DOCS_URL}}" class="btn btn-white btn-lg btn-arrow-red" hx-boost="false">Read Installation Guide</a>
-      </p>
-      <p class="cta-sublink">
-        <a href="{{REPO_URL}}" hx-boost="false"> the Source Code on Repository</a>
-      </p>
-    </section> -->
-
   </main>
 
   <footer class="site-footer">
     <div class="footer-grid">
-      <div class="footer-col">
+      <nav class="footer-col" aria-label="Learn About Radova">
         <h3 class="footer-heading" data-i18n="footer.col1">Learn About Radova</h3>
         <ul class="footer-links">
           <li><a href="https://radova.org/about/" hx-boost="false" data-i18n="nav.about">About</a></li>
@@ -324,9 +259,9 @@
           <li><a href="https://radova.org/latest/" hx-boost="false" data-i18n="nav.latest">Latest</a></li>
           <li><a href="https://radova.org/events" hx-boost="false" data-i18n="nav.events">Events</a></li>
         </ul>
-      </div>
+      </nav>
 
-      <div class="footer-col">
+      <nav class="footer-col" aria-label="Resources">
         <h3 class="footer-heading" data-i18n="footer.col2">Resources</h3>
         <ul class="footer-links">
           <li><a target="_blank" rel="noopener" href="https://packer.radova.org" data-i18n="nav.packages">Packages</a></li>
@@ -334,9 +269,9 @@
           <li><a href="https://radova.org/learns" hx-boost="false" data-i18n="nav.learning">Learning</a></li>
           <li><a href="https://sourceforge.net/projects/memora/files/radova-linux-2026.11.06-x86_64.iso/download" hx-boost="false" data-i18n="footer.download">Download ISO</a></li>
         </ul>
-      </div>
+      </nav>
 
-      <div class="footer-col">
+      <nav class="footer-col" aria-label="Core Pillars">
         <h3 class="footer-heading" data-i18n="footer.col3">Core Pillars</h3>
         <ul class="footer-links">
           <li><a href="#fitur">Memora</a></li>
@@ -344,16 +279,16 @@
           <li><a href="#fitur">Coretez</a></li>
           <li><a href="#fitur">Linkers</a></li>
         </ul>
-      </div>
+      </nav>
 
-      <div class="footer-col">
+      <nav class="footer-col" aria-label="Help and Specs">
         <h3 class="footer-heading" data-i18n="footer.col4">Help &amp; Specs</h3>
         <ul class="footer-links">
           <li><a href="https://radova.org/about/contact" hx-boost="false" data-i18n="nav.contact">Contact</a></li>
           <li><a href="#spesifikasi" data-i18n="footer.specs">System Requirements</a></li>
           <li><a href="https://radova.org/latest/security/" hx-boost="false" data-i18n="footer.security">Security Advisories</a></li>
         </ul>
-      </div>
+      </nav>
     </div>
 
     <div class="footer-bottom">
@@ -370,7 +305,7 @@
   </footer>
 
   <script src="/assets/htmx.min.js" defer></script>
-  <script src="/assets/site.js?v=5" defer></script>
-  <script src="/assets/navbar.js?v=2" defer></script>
+  <script src="/assets/site.js?v=6" defer></script>
+  <script src="/assets/navbar.js?v=3" defer></script>
 </body>
 </html>

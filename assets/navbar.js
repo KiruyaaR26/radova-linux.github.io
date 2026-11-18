@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const navBtn = document.getElementById('test2');
+    const navBtn = document.getElementById('about-menu-btn');
     const dropdownContainer = document.querySelector('.dropdown');
     const backBtn = document.querySelector('.d-content-back');
 

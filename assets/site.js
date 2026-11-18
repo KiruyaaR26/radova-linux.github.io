@@ -8,8 +8,7 @@
 
     var groups = [
       document.querySelectorAll(".fitur-card"),
-      document.querySelectorAll(".spec-card"),
-      document.querySelectorAll(".unduh-card")
+      document.querySelectorAll(".spec-card")
     ];
 
     for (var g = 0; g < groups.length; g++) {
@@ -41,36 +40,6 @@
       } else {
         observer.observe(reveals[r]);
       }
-    }
-  }
-
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    var boxes = document.querySelectorAll(".code-box");
-    for (var b = 0; b < boxes.length; b++) {
-      (function (box) {
-        var pre = box.querySelector("pre");
-        if (!pre) return;
-
-        var btn = document.createElement("button");
-        btn.type = "button";
-        btn.className = "copy-btn";
-        btn.textContent = "Copy";
-        btn.setAttribute("aria-label", "Copy code to clipboard");
-
-        btn.addEventListener("click", function () {
-          var text = (pre.textContent || "").trim();
-          navigator.clipboard.writeText(text).then(function () {
-            btn.textContent = "Copied";
-            btn.classList.add("is-copied");
-            setTimeout(function () {
-              btn.textContent = "Copy";
-              btn.classList.remove("is-copied");
-            }, 1800);
-          });
-        });
-
-        box.appendChild(btn);
-      })(boxes[b]);
     }
   }
 })();
