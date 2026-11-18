@@ -175,7 +175,15 @@ document.addEventListener("DOMContentLoaded", () => {
     "specs.disp.desc": "Berjalan baik di grafis bawaan Intel/AMD maupun layar virtual agar dokumen tetap terbaca jelas.",
     "specs.min": "Minimal",
     "specs.rec": "Disarankan",
-    "footer.copy": "© 2026 yuros.org · Dirilis di bawah Lisensi MIT"
+    "footer.col1": "Tentang Radova",
+    "footer.col2": "Sumber Daya",
+    "footer.col3": "Pilar Utama",
+    "footer.col4": "Bantuan & Spesifikasi",
+    "footer.download": "Unduh ISO",
+    "footer.specs": "Kebutuhan Sistem",
+    "footer.security": "Info Keamanan",
+    "footer.copy": "© 2026 yuros.org · Dirilis di bawah Lisensi MIT",
+    "footer.top": "Ke atas ↑"
   };
 
   // ponytail: snapshot initial EN strings per element instead of duplicating them in JS

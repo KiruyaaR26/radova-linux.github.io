@@ -12,7 +12,7 @@
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-latin-wght.woff2" crossorigin>
   <link rel="icon" type="image/svg+xml" href="/assets/logo.png">
   <link rel="stylesheet" href="/assets/pico.min.css">
-  <link rel="stylesheet" href="/assets/site.css?v=14">
+  <link rel="stylesheet" href="/assets/site.css?v=15">
   <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
   <meta name="htmx-config" content='{"allowEval":false,"allowScriptTags":false,"selfRequestsOnly":true,"includeIndicatorStyles":false}'>
 </head>
@@ -315,22 +315,62 @@
   </main>
 
   <footer class="site-footer">
-    <span class="brand-lockup brand-lockup-light">
-      <img src="assets/logo-white.png" width="32">
-      <span class="brand-name">RADOVA</span>
-    </span>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3 class="footer-heading" data-i18n="footer.col1">Learn About Radova</h3>
+        <ul class="footer-links">
+          <li><a href="https://radova.org/about/" hx-boost="false" data-i18n="nav.about">About</a></li>
+          <li><a href="https://radova.org/about/history" hx-boost="false" data-i18n="nav.history">History</a></li>
+          <li><a href="https://radova.org/latest/" hx-boost="false" data-i18n="nav.latest">Latest</a></li>
+          <li><a href="https://radova.org/events" hx-boost="false" data-i18n="nav.events">Events</a></li>
+        </ul>
+      </div>
 
-    <ul class="footer-links">
-      <li><a href="https://radova.org/about" hx-boost="false" data-i18n="nav.about">Abouts</a></li>
-      <!-- <li><a href="{{DOCS_URL}}" hx-boost="false">Documentation</a></li>
-      <li><a href="{{CONTACT_URL}}" hx-boost="false">Contact</a></li> -->
-    </ul>
+      <div class="footer-col">
+        <h3 class="footer-heading" data-i18n="footer.col2">Resources</h3>
+        <ul class="footer-links">
+          <li><a target="_blank" rel="noopener" href="https://packer.radova.org" data-i18n="nav.packages">Packages</a></li>
+          <li><a target="_blank" rel="noopener" href="https://wiki.radova.org" data-i18n="nav.wiki">Wiki</a></li>
+          <li><a href="https://radova.org/learns" hx-boost="false" data-i18n="nav.learning">Learning</a></li>
+          <li><a href="https://sourceforge.net/projects/memora/files/radova-linux-2026.11.06-x86_64.iso/download" hx-boost="false" data-i18n="footer.download">Download ISO</a></li>
+        </ul>
+      </div>
 
-    <p class="footer-copy" data-i18n="footer.copy">© 2026 yuros.org · Released under the MIT License</p>
+      <div class="footer-col">
+        <h3 class="footer-heading" data-i18n="footer.col3">Core Pillars</h3>
+        <ul class="footer-links">
+          <li><a href="#fitur">Memora</a></li>
+          <li><a href="#fitur">Evrocks</a></li>
+          <li><a href="#fitur">Coretez</a></li>
+          <li><a href="#fitur">Linkers</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading" data-i18n="footer.col4">Help &amp; Specs</h3>
+        <ul class="footer-links">
+          <li><a href="https://radova.org/about/contact" hx-boost="false" data-i18n="nav.contact">Contact</a></li>
+          <li><a href="#spesifikasi" data-i18n="footer.specs">System Requirements</a></li>
+          <li><a href="https://radova.org/latest/security/" hx-boost="false" data-i18n="footer.security">Security Advisories</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-brand-bar">
+        <span class="brand-lockup brand-lockup-light">
+          <img src="assets/logo-white.png" alt="Radova Logo" width="28">
+          <span class="brand-name">RADOVA</span>
+        </span>
+        <p class="footer-copy" data-i18n="footer.copy">© 2026 yuros.org · Released under the MIT License</p>
+      </div>
+
+      <a class="footer-top" href="#main" data-i18n="footer.top">Back to top ↑</a>
+    </div>
   </footer>
 
   <script src="/assets/htmx.min.js" defer></script>
-  <script src="/assets/site.js?v=4" defer></script>
+  <script src="/assets/site.js?v=5" defer></script>
   <script src="/assets/navbar.js?v=2" defer></script>
 </body>
 </html>

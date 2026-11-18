@@ -2037,49 +2037,114 @@ main #fitur .fitur-matrix article.fitur-card {
 }
 
 /* ==========================================================================
-   Section 9: Footer
+   Section 9: Footer (AWS-style multi-column directory)
    ========================================================================== */
 .site-footer {
-  background: var(--red-900);
-  padding-block: 3.5rem 4rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  text-align: center;
+  background: var(--red-700);
+  border-top: 3px solid var(--red-600);
+  padding-block: 3.5rem 2.25rem;
+  color: rgba(247, 246, 255, 0.78);
 }
 
-@media (min-width: 768px) {
-  .site-footer {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.25rem 2rem;
+  padding-bottom: 2.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+@media (min-width: 576px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+
+@media (min-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.footer-heading {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin: 0 0 1rem;
 }
 
 .footer-links {
   display: flex;
-  gap: 1.75rem;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-links a {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 14.5px;
-  font-weight: 500;
+  color: rgba(247, 246, 255, 0.72);
+  font-size: 14px;
+  font-weight: 400;
   text-decoration: none;
+  transition: color 160ms ease;
 }
 
 .footer-links a:hover {
   color: var(--white);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-top: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.footer-brand-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
 }
 
 .footer-copy {
-  font-size: 13.5px;
-  color: rgba(255, 255, 255, 0.55);
+  font-size: 13px;
+  color: rgba(247, 246, 255, 0.58);
   margin: 0;
+}
+
+.footer-top {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(247, 246, 255, 0.85);
+  text-decoration: none;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  transition: border-color 160ms ease, color 160ms ease, background-color 160ms ease;
+}
+
+.footer-top:hover {
+  color: var(--white);
+  border-color: var(--red-600);
+  background-color: rgba(219, 0, 15, 0.16);
 }
 
 /* Hamburger Toggle Button (Hidden on Desktop) */
