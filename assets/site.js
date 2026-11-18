@@ -183,7 +183,13 @@ document.addEventListener("DOMContentLoaded", () => {
     "footer.specs": "Kebutuhan Sistem",
     "footer.security": "Info Keamanan",
     "footer.copy": "© 2026 yuros.org · Dirilis di bawah Lisensi MIT",
-    "footer.top": "Ke atas ↑"
+    "footer.top": "Ke atas ↑",
+    "err.home": "Beranda",
+    "err.chip": "Dalam Pengerjaan",
+    "err.title1": "Sedang dalam",
+    "err.title2": "pengembangan.",
+    "err.lead": "Bagian ini sedang kami bangun dan sempurnakan agar memenuhi standar kualitas Radova.",
+    "err.cta": "Kembali ke Beranda"
   };
 
   // ponytail: snapshot initial EN strings per element instead of duplicating them in JS
