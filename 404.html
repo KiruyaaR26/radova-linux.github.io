@@ -5,13 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light">
   <title>Under Construction — Radova Linux</title>
-  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/lato-latin-900.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-latin-wght.woff2" crossorigin>
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="icon" type="image/png" href="assets/media/logo.png">
   <meta name="htmx-config" content='{"selfRequestsOnly":true,"allowScriptTags":false,"allowEval":false}'>
-  <link rel="stylesheet" href="/assets/pico.min.css">
-  <link rel="stylesheet" href="/assets/site.css?v=16">
-  <script src="/assets/htmx.min.js" defer></script>
+  <link rel="stylesheet" href="assets/css/home.bundle.css?v=5">
 </head>
 <body>
   <header class="site-header">
@@ -24,7 +20,7 @@
       <span class="brand-name">RADOVA</span>
     </span>
     <div class="header-cta">
-      <button type="button" id="theme-toggle" class="btn-theme" data-set-theme="light" hx-get="/assets/theme-dark.html" hx-target="#theme-toggle" hx-swap="outerHTML" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
+      <button type="button" id="theme-toggle" class="btn-theme" data-set-theme="light" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
         <svg width="16" height="16" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M216.7 152.6A91.9 91.9 0 0 1 103.4 39.3a92 92 0 1 0 113.3 113.3Z"/></svg>
       </button>
       <button type="button" id="lang-toggle" class="btn-lang" aria-label="Switch language to Indonesian">EN</button>
@@ -88,7 +84,7 @@
     <div class="footer-bottom">
       <div class="footer-brand-bar">
         <span class="brand-lockup brand-lockup-light">
-          <img src="/assets/logo-white.png" alt="Radova Logo" width="28">
+          <img src="assets/media/logo-white-64.webp" alt="Radova Logo" width="28" height="28" loading="lazy" decoding="async">
           <span class="brand-name">RADOVA</span>
         </span>
         <p class="footer-copy" data-i18n="footer.copy">© 2026 yuros.org · Released under the MIT License</p>
@@ -97,6 +93,6 @@
       <a class="footer-top" href="#main" data-i18n="footer.top">Back to top ↑</a>
     </div>
   </footer>
-  <script src="/assets/site.js?v=6" defer></script>
+  <script>(()=>{let l;const f=(e)=>{if(l)return;l=1;const c=document.createElement("link");c.rel="stylesheet";c.href="assets/css/fonts.css";document.head.appendChild(c);const j=document.createElement("script");j.src="assets/js/home.bundle.js?v=5";const t=e&&e.target&&e.target.closest&&e.target.closest("button");if(t)j.onload=()=>t.click();document.body.appendChild(j);const s=document.createElement("script");s.src="assets/js/htmx.min.js";document.body.appendChild(s)};try{if(localStorage.getItem("radova-theme")==="dark"||localStorage.getItem("radova-lang")==="id")f()}catch(_){}["pointerdown","keydown","touchstart","scroll"].forEach(e=>addEventListener(e,f,{once:true,passive:true}))})();</script>
 </body>
 </html>
